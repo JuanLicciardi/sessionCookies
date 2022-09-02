@@ -3,16 +3,98 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid red;
+
 }
 
+.index_header{
+    width: 95%;
+    height: 50px;
+    background-color: rgb(143, 34, 106);
+    box-shadow: 0px 10px 10px rgb(71, 70, 70);
+}
+
+.index_header h1{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    
+}
+
+
 .index_main{
-    width: 60%;
-    border: 2px solid rgb(35, 218, 29);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    margin-top: 55px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+
 
 }
 
 .index_section{
-    border: 2px solid rgb(39, 20, 146);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 
+        0px 0px 10px black,
+        0px 0px 30px black;
+    background-color: white;
+    border-radius: 15px 0 15px 0;
+
+}
+
+.index_section h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: red;
+}
+
+.form_cont{
+    padding: 10px 0;
+    margin: 3px 0;
+
+}
+
+.form_input{
+    width: 100%;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    font-size: 22px;
+
+}
+
+.form_edad{
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button_cont{
+    text-align: center;
+    background-color: none;
+}
+
+.Boton{
+    background-color: rgb(58, 58, 199);
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px;
+   
+}
+
+.Boton:hover{
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
 
 }

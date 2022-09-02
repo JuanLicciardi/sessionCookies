@@ -5,39 +5,39 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body class="index_body">
-    <header>
+    <header class="index_header">
+      <h1>SECCION & COOKIES</h1>
     </header>
     <main class="index_main">
       <section class="index_section">
         <h1> formulario</h1>
         <form action="">
-          <div>
-            <label for="">Ingrese su nombre</label>
-            <input type="text">
+          <div class="form_cont">
+            <label for="name">Ingrese su nombre</label>
+            <input class="form_input" type="text" id="name" autocomplete="off">
             <small></small>
           </div>
-          <div>
-            <label for="">Ingrese su email</label>
-            <input type="email">
+          <div class="form_cont">
+            <label for="email">Ingrese su email</label>
+            <input class="form_input" type="email" id="email" autocomplete="off">
             <small></small>
           </div>
-          <div>
-            <label for="">Ingrese su edad</label>
-            <input type="number">
+          <div class="form_cont">
+            <label for="edad">Ingrese su edad</label>
+            <input class="form_edad" type="number" id="edad">
           </div>
-          <div>
-            <button type="submit">ENVIAR</button>
-          </div>
-          <div>
+           <div class="form_cont">
+            <label for=""> Color</label>
             <select name="" id="">
-              <option value="azul">azul</option>
-              <option value="amarillo">amarillo</option>
-              <option value="verde">verde</option>
+              <option value="red">ROJO</option>
+              <option value="green">VERDE</option>
+              <option value="blue">AZUL</option>
             </select>
           </div>
-
+          <div class="button_cont">
+            <button class="Boton" type="submit">ENVIAR</button>
+          </div>
         </form>
-
 
       </section>
     </main>
