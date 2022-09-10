@@ -6,6 +6,36 @@
 
 }
 
+.index_body-red{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: red;
+}
+
+.index_body-blue{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: blue;
+}
+
+.index_body-green{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: green;
+}
+
+.index_body-yellow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: yellow;
+}
+
+
+
 .index_header{
     width: 95%;
     height: 50px;
@@ -49,6 +79,9 @@
 
 }
 
+
+
+
 .index_section h1{
     text-align: center;
     text-transform: uppercase;
@@ -76,6 +109,10 @@
     width: 50px;
     text-align: center;
     font-size: 16px;
+}
+
+.alert{
+    color: red;
 }
 
 .button_cont{

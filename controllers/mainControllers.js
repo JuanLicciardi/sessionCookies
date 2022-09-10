@@ -1,11 +1,13 @@
 
 const {loadUsers,saveUser} = require('../data/db_modules');
 const {validationResult} = require ('express-validator');
+const colors = require ('../data/colors')
+
 
 module.exports={
 
     index: (req, res, next) => {
-        res.render('index', { title: 'Session & Cookies' });
+        res.render('index', {colors});
       },
     
     validation: (req, res, next) => {
@@ -14,9 +16,8 @@ module.exports={
 
     controlRegister: (req, res, next) => {
         const errors = validationResult(req);
-        const {nombre,email,edad} = req.body;
+        const {nombre,email,edad,colores} = req.body;
         const users = loadUsers();
-
 
         if (errors.isEmpty()){
             const newUser = {
@@ -24,13 +25,27 @@ module.exports={
                 nombre: nombre.trim(),
                 email : email.trim(),
                 edad,
+                colores
             }
             const usersModify = [...users,newUser];
             saveUser(usersModify);
+            
+
+            req.session.userLogin = {
+                id: users.id,
+                nombre,
+                email,
+                edad,
+                colores
+            }
+            
+
             res.redirect('users/mensaje');
-           } else {
+
+        } else {
             return res.render('index',{
-                title : "macacnon",
+                title : "Usando Session",
+                colors,
                 errors : errors.mapped(),
                 old : req.body
             })

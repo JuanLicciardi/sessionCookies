@@ -1,21 +1,26 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body class="index_body">
+<%- include('./partials/head', {title:"Mensaje"}) %>
+
+
+<%- include('./partials/colorBody') %> 
+
     <header class="index_header">
       <h1>SECCION & COOKIES</h1>
     </header>
     <main class="index_main">
       <section class="index_section">
-
-
-        <h1 class="" > MENSAJE</h1>
-        
-        
-
+        <h1 class="" >  MENSAJE</h1>
+        <p>
+          Hola <%= locals.userLogin.nombre %>, <% if (locals.userLogin.colores=="") { %>
+             no elegiste color,
+          <% }else{ %>
+            elegiste el color <%= locals.userLogin.colores %>,
+          <% } %>
+                    
+          tu email es <%= locals.userLogin.email %> y tienes <%= locals.userLogin.edad %> años de edad 
+        </p>
+        <div class="button_cont">
+          <a class="Boton" href="../users/logout">volver</a>
+        </div>
       </section>
     </main>
 

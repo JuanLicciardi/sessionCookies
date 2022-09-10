@@ -3,9 +3,10 @@ var router = express.Router();
 
 /* GET users listing. */
 
-const {msj} = require ('../controllers/usersControllers');
+const {msj, logout} = require ('../controllers/usersControllers');
 
 router
   .get('/mensaje', msj)
+  .get('/logout', logout)
 
 module.exports = router;

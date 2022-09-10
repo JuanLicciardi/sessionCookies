@@ -12,3 +12,10 @@ body {
     color: #00B7FF;
   }
   
+
+  :root {
+    --color01 : green ;
+    --color02 : blue;
+
+  }
+ 
