@@ -11,24 +11,26 @@
     <main class="index_main">
       <section class="index_section">
         <h1> formulario</h1>
-        <form action="">
+
+        <form action="/validacion" method="POST">
+
           <div class="form_cont">
             <label for="name">Ingrese su nombre</label>
-            <input class="form_input" type="text" id="name" autocomplete="off">
-            <small></small>
+            <input class="form_input" type="text" id="name" name="nombre" value="<%= locals.old && old.nombre ? old.nombre : null %>">
+            <small><%= locals.errors && errors.nombre ? errors.nombre.msg : null %></small>
           </div>
           <div class="form_cont">
             <label for="email">Ingrese su email</label>
-            <input class="form_input" type="email" id="email" autocomplete="off">
-            <small></small>
+            <input class="form_input" type="email" id="email" name="email" autocomplete="off">
+            <small><%= locals.errors && errors.email ? errors.email.msg : null %></small>
           </div>
           <div class="form_cont">
             <label for="edad">Ingrese su edad</label>
-            <input class="form_edad" type="number" id="edad">
+            <input class="form_edad" type="number" id="edad" name="edad" value="0">
           </div>
            <div class="form_cont">
             <label for=""> Color</label>
-            <select name="" id="">
+            <select name="" id="" name="select" >
               <option value="red">ROJO</option>
               <option value="green">VERDE</option>
               <option value="blue">AZUL</option>

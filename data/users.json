@@ -1,0 +1,38 @@
+[
+   {
+      "id": 1,
+      "nombre": "JUAN",
+      "email": "juani@gmail.com",
+      "edad": "12"
+   },
+   {
+      "id": 2,
+      "nombre": "juan",
+      "email": "",
+      "edad": "0"
+   },
+   {
+      "id": 3,
+      "nombre": "juan",
+      "email": "",
+      "edad": "0"
+   },
+   {
+      "id": 4,
+      "nombre": "jose",
+      "email": "",
+      "edad": "0"
+   },
+   {
+      "id": 5,
+      "nombre": "",
+      "email": "",
+      "edad": "0"
+   },
+   {
+      "id": 6,
+      "nombre": "JUAN",
+      "email": "FASD@JOS.COM",
+      "edad": "0"
+   }
+]
