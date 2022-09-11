@@ -10,9 +10,6 @@ module.exports={
         res.render('index', {colors});
       },
     
-    validation: (req, res, next) => {
-        res.send ('vamos por buen camino')
-    },
 
     controlRegister: (req, res, next) => {
         const errors = validationResult(req);
@@ -39,6 +36,7 @@ module.exports={
                 colores
             }
             
+            res.cookie('userLogin',req.session.userLogin,{maxAge: 100 * 60})
 
             res.redirect('users/mensaje');
 
@@ -50,5 +48,12 @@ module.exports={
                 old : req.body
             })
           }
-    }
+    },
+ 
+    destroy: (req, res) => {
+        req.session.destroy();
+        res.cookie('userLogin', null,{maxAge:-1})
+        res.redirect('/')
+    },
+
 }

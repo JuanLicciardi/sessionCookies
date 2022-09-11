@@ -1,13 +1,20 @@
 <%- include('./partials/head', {title:"Session & Cookies"}) %>
 
 
+<% if (locals.userLogin) { %>
+  <%- include('./partials/colorBody') %> 
+<% } else{ %>
   <body class="index_body">
+<% } %>
+
+
+
     <header class="index_header">
       <h1>SECCION & COOKIES</h1>
     </header>
     <main class="index_main">
       <section class="index_section">
-        <h1> formulario</h1>
+        <h1> Carga Información</h1>
 
         <form action="/validacion" method="POST">
 
@@ -36,6 +43,7 @@
           </div>
 
           <div class="button_cont">
+            <a class="Boton" href="/destroy" type="reset">Olvidar Color</a>
             <button class="Boton" type="submit">ENVIAR</button>
           </div>
         </form>

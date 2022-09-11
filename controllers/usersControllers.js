@@ -1,4 +1,6 @@
-const colors = require ('../data/colors')
+const colors = require ('../data/colors');
+
+
 
 module.exports = {
 
@@ -7,6 +9,7 @@ module.exports = {
     },
 
     logout: (req,res) => {
-        res.render('logout',{colors})
+        res.cookie('userLogin',req.session.userLogin,{maxAge: 1000 * 60})
+        res.render('logout')
     }
 }
