@@ -9,7 +9,6 @@ module.exports = {
     },
 
     logout: (req,res) => {
-        res.cookie('userLogin',req.session.userLogin,{maxAge: 1000 * 60})
         res.render('logout')
     }
 }

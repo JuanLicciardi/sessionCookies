@@ -13,7 +13,7 @@ module.exports={
 
     controlRegister: (req, res, next) => {
         const errors = validationResult(req);
-        const {nombre,email,edad,colores} = req.body;
+        const {nombre,email,edad,colores,saveColor} = req.body;
         const users = loadUsers();
 
         if (errors.isEmpty()){
@@ -22,7 +22,8 @@ module.exports={
                 nombre: nombre.trim(),
                 email : email.trim(),
                 edad,
-                colores
+                colores,
+                saveColor
             }
             const usersModify = [...users,newUser];
             saveUser(usersModify);
@@ -33,10 +34,14 @@ module.exports={
                 nombre,
                 email,
                 edad,
-                colores
+                colores,
+                saveColor
             }
             
-            res.cookie('userLogin',req.session.userLogin,{maxAge: 100 * 60})
+            res.cookie('userLogin',req.session.userLogin,{maxAge: 150 * 60})
+            if(saveColor){
+                res.cookie('userLogin',req.session.userLogin,{maxAge: 4000 * 60})
+            }
 
             res.redirect('users/mensaje');
 

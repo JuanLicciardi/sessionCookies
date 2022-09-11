@@ -1,7 +1,11 @@
 <%- include('./partials/head', {title:"Mensaje"}) %>
 
 
-<%- include('./partials/colorBody') %> 
+<% if (locals.userLogin) { %>
+  <%- include('./partials/colorBody') %> 
+<% } else{ %>
+  <body class="index_body">
+<% } %>
 
     <header class="index_header">
       <h1>SECCION & COOKIES</h1>
